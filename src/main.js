@@ -76,6 +76,7 @@ function PostToServer(x, y, r) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == XMLHttpRequest.DONE && xhr.status === 200) {
             newData(xhr.responseText);
+
         }
     };
     xhr.open('POST', 'handler.php', true);
@@ -97,6 +98,7 @@ function PostToServer(x, y, r) {
 function newData(text){
     var i = localStorage.length;
     try{
+
         txt = parseJSON(text, i);
     }catch (err){
         console.log(err);
@@ -104,11 +106,9 @@ function newData(text){
     localStorage.setItem('table_row' + i, text);
     // console.log(txt);
     addToTable(txt);
-
 }
 
 function addToTable(txt){
-
     const table = document.getElementById("Data");
     table.innerHTML += txt;
 }
@@ -133,6 +133,7 @@ function fillThetabel(){
 
 function parseJSON(text, id = -1) {
     try {
+        console.log(text);
         var row = JSON.parse(text);
         console.log(row);
         console.log(row.X);

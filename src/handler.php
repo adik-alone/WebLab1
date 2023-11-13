@@ -148,16 +148,15 @@ $table_row = array(
     "Date_now" => $date_now
 );
 
-echo json_encode($table_row);
-
+// echo json_encode($table_row);
 
 //
-//echo $x;
-//echo $y;
-//echo $r;
-//echo $result;
-//echo $execute_time;
-//echo $date_now;
+echo $x;
+echo $y;
+echo $r;
+echo $result;
+echo $execute_time;
+echo $date_now;
 
 
 //echo $x," ", $y, " ",  $r, "<br>";
